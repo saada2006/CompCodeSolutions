@@ -1,0 +1,1 @@
+{"name":"Local: WeddingCake","url":"/home/saad/Github/CompCode/UTPC22/WeddingCake.cpp","tests":[{"id":1666546913987,"input":"11\n1 1 2 3 4 4 5 2 3 4 5\n","output":"2\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/saad/Github/CompCode/UTPC22/WeddingCake.cpp","group":"local","local":true}

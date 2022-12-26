@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"/home/saad/Github/CompCode/CF/Rounds/829/A.cpp","tests":[{"id":1669273001001,"input":"5\n4\nQQAA\n4\nQQAQ\n3\nQAA\n1\nQ\n14\nQAQQAQAAQQQAAA\n","output":"Yes\nNo\nYes\nNo\nYes\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/saad/Github/CompCode/CF/Rounds/829/A.cpp","group":"local","local":true}
