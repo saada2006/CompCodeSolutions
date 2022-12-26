@@ -54,7 +54,8 @@ int main() {
             if(x < h)
                 diff = h - x;
             else
-                diff = x - u;
+                diff = x - u; 
+                
             cost += diff * diff;
         }
         if(cost < bestc) {
