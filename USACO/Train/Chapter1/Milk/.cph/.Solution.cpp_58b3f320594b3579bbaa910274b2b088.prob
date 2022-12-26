@@ -1,0 +1,1 @@
+{"name":"Local: Solution","url":"/home/saad/Github/CompCode/USACO/Train/Chapter1/Milk/Solution.cpp","tests":[{"id":1671954527251,"input":"100 5\n5 20\n9 40\n3 10\n8 80\n6 30","output":"630"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/saad/Github/CompCode/USACO/Train/Chapter1/Milk/Solution.cpp","group":"local","local":true}
