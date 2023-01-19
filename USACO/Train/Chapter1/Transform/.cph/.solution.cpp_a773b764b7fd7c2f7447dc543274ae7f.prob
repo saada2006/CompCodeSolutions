@@ -1,1 +1,0 @@
-{"name":"Local: solution","url":"/home/saad/Github/CompCode/USACO/Train/Chapter1/Transform/solution.cpp","tests":[{"id":1671869682461,"input":"3\n@-@\n---\n@@-\n@-@\n@--\n--@","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/saad/Github/CompCode/USACO/Train/Chapter1/Transform/solution.cpp","group":"local","local":true}

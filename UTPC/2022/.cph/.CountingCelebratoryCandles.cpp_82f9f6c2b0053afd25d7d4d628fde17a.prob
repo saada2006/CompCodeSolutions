@@ -1,1 +1,0 @@
-{"name":"Local: CountingCelebratoryCandles","url":"/home/saad/Github/CompCode/UTPC22/CountingCelebratoryCandles.cpp","tests":[{"id":1666547797100,"input":"603023841441\n","output":"2\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/saad/Github/CompCode/UTPC22/CountingCelebratoryCandles.cpp","group":"local","local":true}

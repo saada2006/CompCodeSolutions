@@ -1,1 +1,0 @@
-{"name":"Local: SourSkittles","url":"/home/saad/Github/CompCode/UTPC22/SourSkittles.cpp","tests":[{"id":1666547662525,"input":"6\n5\n1 5 3 2 0\n","output":"0\n"},{"id":1666547673450,"input":"4\n2\n1 2 3 4 5 6 7\n","output":"9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/saad/Github/CompCode/UTPC22/SourSkittles.cpp","group":"local","local":true}
