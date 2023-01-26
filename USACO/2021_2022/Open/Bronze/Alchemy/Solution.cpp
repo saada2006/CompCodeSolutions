@@ -3,63 +3,63 @@
 #include <algorithm>
 #include <map>
 
-/*
+using namespace std;
 
-An observation we can make is that to make 1 unit of n, we can go down the recipe tree and see how many of the rudimentry metals (the ones we cannot "craft") we need
-We can then count the maximum number of metal n we can craft by dividing the avaible amount by the rudiementry amount
+// what does it take to make 1 unit of metal N? it's materials of course
+// so we try to create one unit of each metal required, and if we fail, we are done
 
-Note: we need to be careful with useless metals taht cannot be crafted into higher metals
-*/
-
-void collapse(std::vector<int>& single, const std::map<int, std::vector<int>>& recipies) {
-    for(auto iter = recipies.rbegin(); iter!= recipies.rend(); iter++) {
-        // decraft into other decraftable or rudimentary metals
-        int& count = single[iter->first];
-        for(int x : iter->second) {
-            single[x] += count;
+bool craft(int metal, vector<int>& metals, const vector<vector<int>>& recipes) {
+    //cout << "Crafting metal " << metal << '\n';
+    // if we have the metal, then craft
+    if(metal != metals.size() - 1 && metals[metal] > 0) {
+        metals[metal]--;
+        return true;
+    } else {
+        // craft, if we can, else our process is done
+        if(recipes[metal].empty()) {
+            return false;
         }
-        count = 0;
+
+        bool crafted = true;
+        for(int ingredient : recipes[metal]) {
+            if(!craft(ingredient, metals, recipes)) {
+                crafted = false;
+                break;
+            }
+        }
+
+        return crafted;
     }
 }
 
 int main() {
+
     int n;
-    std::cin >> n;
+    cin >> n;
 
-    std::vector<int> metals(n);
-
+    vector<int> metals(n);
     for(int& x : metals) {
-        std::cin >> x;
+        cin >> x;
     }
 
     int k;
-    std::cin >> k;
-    std::map<int, std::vector<int>> recipies;
+    cin >> k;
+
+    vector<vector<int>> recipes(n);
     for(int i = 0; i < k; i++) {
         int l, m;
-        std::cin >> l >> m;
+        cin >> l >> m;
         l--;
 
-        recipies[l].resize(m);
-        for(int& x : recipies[l]) {
-            std::cin >> x;
+        recipes[l].resize(m);
+        for(int& x : recipes[l]) {
+            cin >> x;
             x--;
         }
     }
 
-
-    collapse(metals, recipies);
-    std::vector<int> single(n);
-    single.back() = 1;
-    collapse(single, recipies);
-
-    int div = INT32_MAX;
-    for(int i = 0; i < n; i++) {
-        if(single[i] != 0){
-            div = std::min(div, metals[i] / single[i]);
-        }
+    while(craft(n - 1, metals, recipes)) {
+        metals[n - 1]++;
     }
-
-    std::cout << div << '\n';
-    return 0;
+    cout << metals[n - 1] << '\n';
 }
